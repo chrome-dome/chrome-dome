@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Właśnie zostałeś zhakowany</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+        .background {
+            background-image: url('img/hack-background.jpg'); /* Podmień na swoją ścieżkę */
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 4rem;
+            text-shadow: 2px 2px 8px black;
+        }
+        h2 {
+            font-size: 2rem;
+            text-shadow: 2px 2px 8px black;
+        }
+        #visitor-count {
+            position: absolute;
+            bottom: 20px;
+            font-size: 1.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 8px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <h1>Właśnie zostałeś zhakowany!</h1>
+        <h2>Spokojnie, to tylko ćwiczenie. Dowiedz się więcej na naszym szkoleniu.</h2>
+        <div id="visitor-count">Liczba odwiedzin: ...</div> <!-- Licznik odwiedzin -->
+    </div>
+
+    <script>
+        // Pobieranie liczby odwiedzin z pliku PHP
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('counter.php')  // Wywołanie skryptu PHP
+            .then(response => response.text())  // Pobranie odpowiedzi jako tekst
+            .then(data => {
+                document.getElementById('visitor-count').textContent = "Liczba odwiedzin: " + data;
+            })
+            .catch(error => console.error('Błąd: ', error));  // Obsługa błędów
+        });
+    </script>
+</body>
+</html>
