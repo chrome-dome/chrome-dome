@@ -30,18 +30,18 @@ nav .brand-logo{
 
 #index-banner h1{
   letter-spacing: 2px;
-  margin-top: 10rem;
+  margin-top: 7rem;
 }
 
 #index-banner h3{
   letter-spacing: 8px;
   font-weight: 200;
-  margin-bottom: 10rem;
+  margin-bottom: 7rem;
   margin-top: 3rem;
 }
 
 #index-banner h5{
-  margin-bottom: 10rem;
+  margin-bottom: 7rem;
 }
 
 #companyActivity div.row{
@@ -52,7 +52,7 @@ nav .brand-logo{
 #companyActivity div.activity{
   position: relative;
   padding: 0;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 
